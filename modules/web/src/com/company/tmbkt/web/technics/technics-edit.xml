@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.company.tmbkt.web.technics.TechnicsEdit"
+        datasource="technicsDs"
+        messagesPack="com.company.tmbkt.web.technics">
+    <dsContext>
+        <datasource id="technicsDs"
+                    class="com.company.tmbkt.entity.Technics"
+                    view="technics-edit">
+        </datasource>
+    </dsContext>
+    <layout expand="tabsheet"
+            height="100%"
+            spacing="true"
+            width="100%">
+        <tabSheet id="tabsheet">
+            <tab id="mainTab"
+                 caption="msg://mainTab"
+                 margin="true">
+                <scrollBox id="scrollBox56"
+                           height="100%">
+                    <fieldGroup id="fieldGroup"
+                                datasource="technicsDs">
+                        <column width="250px">
+                            <field id="code"/>
+                            <field id="nomination"/>
+                            <field id="model"/>
+                            <field id="comar"/>
+                            <field id="serialNumber"/>
+                            <field id="weight"/>
+                            <field id="width"/>
+                            <field id="length"/>
+                            <field id="depth"/>
+                            <field id="secondHand"/>
+                        </column>
+                    </fieldGroup>
+                </scrollBox>
+            </tab>
+        </tabSheet>
+        <iframe id="windowActions"
+                screen="editWindowActions"/>
+    </layout>
+</window>

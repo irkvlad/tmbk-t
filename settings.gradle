@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) 2019 Haulmont Technology Ltd. All Rights Reserved.
+ * Haulmont Technology proprietary and confidential.
+ * Use is subject to license terms.
+ */
+
+rootProject.name = 'tmbk-t'
+include(':tmbkt-global', ':tmbkt-core', ':tmbkt-gui',
+        ':tmbkt-web', ':tmbkt-portal', ':tmbkt-mobile', ':tmbkt-mobile-rest')
+project(':tmbkt-global').projectDir = new File(settingsDir, 'modules/global')
+project(':tmbkt-core').projectDir = new File(settingsDir, 'modules/core')
+project(':tmbkt-gui').projectDir = new File(settingsDir, 'modules/gui')
+project(':tmbkt-web').projectDir = new File(settingsDir, 'modules/web')
+project(':tmbkt-portal').projectDir = new File(settingsDir, 'modules/portal')
+project(':tmbkt-mobile-rest').projectDir = new File(settingsDir, 'modules/mobile-rest')

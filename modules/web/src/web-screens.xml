@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <include file="/screens.xml"/>
+    <screen id="tmbkt$Technics.edit"
+            template="com/company/tmbkt/web/technics/technics-edit.xml"/>
+    <screen id="tmbkt$Technics.lookup"
+            template="com/company/tmbkt/web/technics/technics-browse.xml"/>
+    <screen id="tmbkt$Technics.browse"
+            template="com/company/tmbkt/web/technics/technics-browse.xml"/>
+</screen-config>
