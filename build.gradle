@@ -8,6 +8,7 @@ allprojects {
     ext.classComment = '''/**
  * @author ${USER}
  */'''
+    ext.vcs = 'Git'
     
 }
 
@@ -157,18 +158,18 @@ configure(coreModule) {
         dbmsVersion = 'Thesis'
         dbms = 'postgres'
         host = 'localhost'
-        dbName = 'thezis'
-        dbUser = 'cuba'
-        dbPassword = 'cuba'
+        dbName = 'tmbk'
+        dbUser = 'root'
+        dbPassword = 'root'
     }
 
     task updateDb(dependsOn: assemble, description: 'Updates local database', type: CubaDbUpdate) {
         dbmsVersion = 'Thesis'
         dbms = 'postgres'
         host = 'localhost'
-        dbName = 'thezis'
-        dbUser = 'cuba'
-        dbPassword = 'cuba'
+        dbName = 'tmbk'
+        dbUser = 'root'
+        dbPassword = 'root'
     }
 }
 

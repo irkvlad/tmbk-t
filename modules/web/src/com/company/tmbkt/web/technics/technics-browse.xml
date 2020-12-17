@@ -41,6 +41,10 @@
                 <column id="model"/>
                 <column id="secondHand"/>
                 <column id="nomination"/>
+                <column id="weightReal"/>
+                <column id="widthReal"/>
+                <column id="lengthReal"/>
+                <column id="depthReal"/>
             </columns>
             <rows datasource="technicsDs"/>
             <rowsCount/>

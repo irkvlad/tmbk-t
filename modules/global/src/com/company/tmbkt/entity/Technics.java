@@ -39,20 +39,65 @@ public class Technics extends StandardEntity {
     @Column(name = "SERIAL_NUMBER", length = 64)
     protected String serialNumber;
 
-    @Column(name = "WEIGHT", length = 50, precision = 10, scale = 3)
+    @Column(name = "SECOND_HAND")
+    protected Boolean secondHand;
+
+    @Column(name = "WEIGHT", precision = 10, scale = 3)
     protected BigDecimal weight;
 
-    @Column(name = "WIDTH", length = 50, precision = 10, scale = 3)
+    @Column(name = "WIDTH", precision = 10, scale = 3)
     protected BigDecimal width;
 
-    @Column(name = "LENGTH", length = 50, precision = 10, scale = 3)
+    @Column(name = "LENGTH", precision = 10, scale = 3)
     protected BigDecimal length;
 
-    @Column(name = "DEPTH", length = 50, precision = 10, scale = 3)
+    @Column(name = "DEPTH", precision = 10, scale = 3)
     protected BigDecimal depth;
 
-    @Column(name = "SECOND_HAND", length = 50)
-    protected Boolean secondHand;
+    @Column(name = "WEIGHT_REAL", precision = 10, scale = 3)
+    protected BigDecimal weightReal;
+
+    @Column(name = "WIDTH_REAL", precision = 10, scale = 3)
+    protected BigDecimal widthReal;
+
+    @Column(name = "LENGTH_REAL", precision = 10, scale = 3)
+    protected BigDecimal lengthReal;
+
+    @Column(name = "DEPTH_REAL", precision = 10, scale = 3)
+    protected BigDecimal depthReal;
+
+    public void setWeightReal(BigDecimal weightReal) {
+        this.weightReal = weightReal;
+    }
+
+    public BigDecimal getWeightReal() {
+        return weightReal;
+    }
+
+    public void setWidthReal(BigDecimal widthReal) {
+        this.widthReal = widthReal;
+    }
+
+    public BigDecimal getWidthReal() {
+        return widthReal;
+    }
+
+    public void setLengthReal(BigDecimal lengthReal) {
+        this.lengthReal = lengthReal;
+    }
+
+    public BigDecimal getLengthReal() {
+        return lengthReal;
+    }
+
+    public void setDepthReal(BigDecimal depthReal) {
+        this.depthReal = depthReal;
+    }
+
+    public BigDecimal getDepthReal() {
+        return depthReal;
+    }
+
 
     public void setCode(String code) {
         this.code = code;

@@ -33,6 +33,10 @@
                             <field id="length"/>
                             <field id="depth"/>
                             <field id="secondHand"/>
+                            <field id="weightReal"/>
+                            <field id="widthReal"/>
+                            <field id="lengthReal"/>
+                            <field id="depthReal"/>
                         </column>
                     </fieldGroup>
                 </scrollBox>
