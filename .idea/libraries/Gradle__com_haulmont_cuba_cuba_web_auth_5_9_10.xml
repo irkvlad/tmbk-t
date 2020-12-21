@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.cuba:cuba-web-auth:5.9.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-web-auth/5.9.10/216a804ed305f328eb0605346e0113fd5e42544/cuba-web-auth-5.9.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-web-auth/5.9.10/7070397177b10ce76356a9164c9a81d9c0e16db6/cuba-web-auth-5.9.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

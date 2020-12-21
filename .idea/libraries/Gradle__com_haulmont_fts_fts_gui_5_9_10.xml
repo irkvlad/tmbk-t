@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.fts:fts-gui:5.9.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.fts/fts-gui/5.9.10/4207f78c552f48765d4a60cd2b0018ec92439061/fts-gui-5.9.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.fts/fts-gui/5.9.10/4e93a239510a255345e2b4c8dbd7627c20429bbb/fts-gui-5.9.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

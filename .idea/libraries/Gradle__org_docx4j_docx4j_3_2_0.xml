@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.docx4j:docx4j:3.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.docx4j/docx4j/3.2.0/a0a9e3024236a74855faadce9903a5a733e16f0f/docx4j-3.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.docx4j/docx4j/3.2.0/7edff2230c3e916734675ac8a6182288c52e19b4/docx4j-3.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

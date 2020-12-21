@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.company.tmbkt.tmbk-t.iml" filepath="$PROJECT_DIR$/.idea/modules/com.company.tmbkt.tmbk-t.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/com.company.tmbkt.tmbkt-core.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/com.company.tmbkt.tmbkt-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/com.company.tmbkt.tmbkt-core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/com.company.tmbkt.tmbkt-core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/core/com.company.tmbkt.tmbkt-core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/core/com.company.tmbkt.tmbkt-core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/com.company.tmbkt.tmbkt-global.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/com.company.tmbkt.tmbkt-global.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/com.company.tmbkt.tmbkt-global.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/com.company.tmbkt.tmbkt-global.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/global/com.company.tmbkt.tmbkt-global.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/global/com.company.tmbkt.tmbkt-global.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/gui/com.company.tmbkt.tmbkt-gui.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/gui/com.company.tmbkt.tmbkt-gui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/gui/com.company.tmbkt.tmbkt-gui.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/gui/com.company.tmbkt.tmbkt-gui.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/gui/com.company.tmbkt.tmbkt-gui.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/gui/com.company.tmbkt.tmbkt-gui.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/mobile-rest/com.company.tmbkt.tmbkt-mobile-rest.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/mobile-rest/com.company.tmbkt.tmbkt-mobile-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/mobile-rest/com.company.tmbkt.tmbkt-mobile-rest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/mobile-rest/com.company.tmbkt.tmbkt-mobile-rest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/mobile-rest/com.company.tmbkt.tmbkt-mobile-rest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/mobile-rest/com.company.tmbkt.tmbkt-mobile-rest.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/portal/com.company.tmbkt.tmbkt-portal.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/portal/com.company.tmbkt.tmbkt-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/portal/com.company.tmbkt.tmbkt-portal.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/portal/com.company.tmbkt.tmbkt-portal.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/portal/com.company.tmbkt.tmbkt-portal.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/portal/com.company.tmbkt.tmbkt-portal.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.company.tmbkt.tmbkt-web.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.company.tmbkt.tmbkt-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.company.tmbkt.tmbkt-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.company.tmbkt.tmbkt-web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/web/com.company.tmbkt.tmbkt-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/web/com.company.tmbkt.tmbkt-web.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tmbkt-mobile/tmbk-t.tmbkt-mobile.iml" filepath="$PROJECT_DIR$/.idea/modules/tmbkt-mobile/tmbk-t.tmbkt-mobile.iml" />
+    </modules>
+  </component>
+</project>

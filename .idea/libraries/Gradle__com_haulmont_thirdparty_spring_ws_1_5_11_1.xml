@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.thirdparty:spring-ws:1.5.11.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thirdparty/spring-ws/1.5.11.1/9e8a1381a9cc345e8ba728048ded8a1ac9b3938/spring-ws-1.5.11.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thirdparty/spring-ws/1.5.11.1/fec489b568583bad8653bb54d3978b1d95f36522/spring-ws-1.5.11.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

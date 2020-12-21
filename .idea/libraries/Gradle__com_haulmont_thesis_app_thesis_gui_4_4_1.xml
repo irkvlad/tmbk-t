@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.thesis.app:thesis-gui:4.4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thesis.app/thesis-gui/4.4.1/ff904c6fdb131908846af047edb291ecf9d270f4/thesis-gui-4.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thesis.app/thesis-gui/4.4.1/3690f6fbd32a25d8469b488c9e917df5719f0352/thesis-gui-4.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

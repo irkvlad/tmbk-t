@@ -150,7 +150,8 @@
                                   height="100%"
                                   stylename="edit-area">
                             <scrollBox id="infoScrollBox"
-                                       height="596px"
+                                       height="100%"
+                                       margin="true"
                                        scrollBars="both">
                                 <vbox id="infoVBox">
                                     <iframe id="header"

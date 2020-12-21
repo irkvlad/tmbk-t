@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.charts:charts-gui:5.9.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.charts/charts-gui/5.9.10/53cfb402810ffd5f884b1927a03faf975b0c4c14/charts-gui-5.9.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.charts/charts-gui/5.9.10/b50f161a84ce880579ed1446eb8066a6e1a82408/charts-gui-5.9.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

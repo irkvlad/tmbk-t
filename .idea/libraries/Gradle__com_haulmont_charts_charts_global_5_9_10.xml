@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.charts:charts-global:5.9.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.charts/charts-global/5.9.10/df3c1cafae5a6adf7fe3b328f5fba28e8996309/charts-global-5.9.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.charts/charts-global/5.9.10/78aae919da917916d6517d4674722b2d63fd861b/charts-global-5.9.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

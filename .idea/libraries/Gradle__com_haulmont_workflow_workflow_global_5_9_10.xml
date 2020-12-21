@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.workflow:workflow-global:5.9.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.workflow/workflow-global/5.9.10/a8d77a74729d368a6f39914573c225ef1c14e10a/workflow-global-5.9.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.workflow/workflow-global/5.9.10/868f18ea4c192072ca708ba413cfd89d4c207530/workflow-global-5.9.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

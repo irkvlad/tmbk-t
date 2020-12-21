@@ -61,6 +61,7 @@ create table TMBKT_TRAWL_APPLICATION (
     primary key (CARD_ID)
 )^
 -- end TMBKT_TRAWL_APPLICATION
+
 --Add default numerator for tmbkt$TrawlApplication
 CREATE OR REPLACE FUNCTION baseInsert()
 RETURNS integer
@@ -72,19 +73,21 @@ cnt = (select count(id) from DF_NUMERATOR where CODE = 'TrawlApplicationNumerato
 if(cnt = 0) then
     INSERT INTO DF_NUMERATOR (ID, CREATE_TS, CREATED_BY, VERSION, CODE, NUMERATOR_FORMAT, SCRIPT_ENABLED,
     PERIODICITY, NUMBER_INITIAL_VALUE, LOC_NAME)
-    VALUES ('397eaadd-1d67-4a37-abe9-3c0f686ee3c0', now(), 'system', 1, 'TrawlApplicationNumerator', '[number]', FALSE, 'Y', 1,
+    VALUES ('f603896a-e38a-416a-bed4-97ba552e4d5a', now(), 'system', 1, 'TrawlApplicationNumerator', '[number]', FALSE, 'Y', 1,
     '{"captionWithLanguageList":[{"language":"ru","caption":"TrawlApplication"},{"language":"en","caption":"TrawlApplication"}]}'
     );
 end if;
+
 return 0;
 END;
 $$
 LANGUAGE plpgsql;
 ^
+
 select baseInsert()^
 drop function if exists baseInsert()^
 --Insert new doc type for tmbkt$TrawlApplication
-insert into TS_CARD_TYPE (ID, CREATE_TS, CREATED_BY, NAME, DISCRIMINATOR,FIELDS_XML) values ('c02d5f9d-9910-446d-8cd2-a06829de85e8', current_timestamp, 'admin', 'tmbkt$TrawlApplication', 1100, '')^
+insert into TS_CARD_TYPE (ID, CREATE_TS, CREATED_BY, NAME, DISCRIMINATOR,FIELDS_XML) values ('3e168f65-ef7d-499c-b5ef-10a169e6a07f', current_timestamp, 'admin', 'tmbkt$TrawlApplication', 1100, '')^
 --Add default doc kind for tmbkt$TrawlApplication
 CREATE OR REPLACE FUNCTION baseInsert()
 RETURNS integer
@@ -92,15 +95,17 @@ AS $$
 DECLARE
 cnt integer = 0;
 BEGIN
-cnt = (select count(CATEGORY_ID) from DF_DOC_KIND where category_id = 'a3376fdb-42e0-4990-a6b9-c5acf2fc9976');
+cnt = (select count(CATEGORY_ID) from DF_DOC_KIND where category_id = '03993b08-f8b4-414a-9f50-9cb70e827387');
 if(cnt = 0) then
     insert into SYS_CATEGORY (ID, NAME, ENTITY_TYPE, IS_DEFAULT, CREATE_TS, CREATED_BY, VERSION, DISCRIMINATOR)
-    values ( 'a3376fdb-42e0-4990-a6b9-c5acf2fc9976', 'Заявка на трал', 'tmbkt$TrawlApplication', false, now(), USER, 1, 1);
+    values ( '03993b08-f8b4-414a-9f50-9cb70e827387', 'Заявка на трал', 'tmbkt$TrawlApplication', false, now(), USER, 1, 1);
+
     insert into DF_DOC_KIND (category_id, create_ts, created_by, version, doc_type_id, numerator_id, 
     numerator_type, category_attrs_place, tab_name, portal_publish_allowed, disable_add_process_actors, create_only_by_template)
-    values ('a3376fdb-42e0-4990-a6b9-c5acf2fc9976', 'now()', 'admin', 1, 'c02d5f9d-9910-446d-8cd2-a06829de85e8', '2f06085d-2617-4ef2-a9c0-9bf1e1ca5d41', 
+    values ('03993b08-f8b4-414a-9f50-9cb70e827387', 'now()', 'admin', 1, '3e168f65-ef7d-499c-b5ef-10a169e6a07f', 'f603896a-e38a-416a-bed4-97ba552e4d5a', 
     1, 1, 'Ð”Ð¾Ð¿. Ð¿Ð¾Ð»Ñ�', false, false, false);
 end if;return 0;
+
 END;
 $$
 LANGUAGE plpgsql;
@@ -112,6 +117,21 @@ drop function if exists baseInsert()^
 update wf_proc set card_types = regexp_replace(card_types, E',tmbkt\\$TrawlApplication', '') where code in ('Endorsement','Resolution','Acquaintance','Registration')^
 update wf_proc set updated_by='admin', card_types = card_types || 'tmbkt$TrawlApplication,' where code in ('Endorsement','Resolution','Acquaintance','Registration')^
 --Update security for entity tmbkt$TrawlApplication
+
+-- begin addSecGroupConstraintsForTrawlApplication
+insert into SEC_CONSTRAINT (ID, CREATE_TS, CREATED_BY, ENTITY_NAME, JOIN_CLAUSE, WHERE_CLAUSE, GROUP_ID) values 
+('b388a7a9-b455-467f-b7de-07874f6f0982', current_timestamp, 'admin', 'tmbkt$TrawlApplication', ', ts$CardAcl acl', '{E}.id = acl.card.id and (acl.user.id = :session$userId or acl.global = true)', '8e6306e2-9e10-414a-b437-24c91ffef804')^
+insert into SEC_CONSTRAINT (ID, CREATE_TS, CREATED_BY, ENTITY_NAME, JOIN_CLAUSE, WHERE_CLAUSE, GROUP_ID) values 
+('19cf0480-ed26-4ed9-8efb-f31ed72b562f', current_timestamp, 'admin', 'tmbkt$TrawlApplication', ', ts$CardAcl acl', '{E}.id = acl.card.id and (acl.user.id = :session$userId or acl.department.id in (:session$departmentIds) or acl.global = true)', '8d9ba07c-9ffa-11e1-b99d-8fc5b41c7fbb')^
+insert into SEC_CONSTRAINT (ID, CREATE_TS, CREATED_BY, ENTITY_NAME, JOIN_CLAUSE, WHERE_CLAUSE, GROUP_ID) values 
+('e5e5e2ca-624a-48be-9a06-0237d453bd73', current_timestamp, 'admin', 'tmbkt$TrawlApplication', ', ts$CardAcl acl', '{E}.id = acl.card.id and (acl.user.id = :session$userId or acl.department.id in (:session$departmentIds) or acl.global = true)', '9fa89a54-9ffa-11e1-b13e-9f4a54bff17e')^
+insert into SEC_CONSTRAINT (ID, CREATE_TS, CREATED_BY, ENTITY_NAME, JOIN_CLAUSE, WHERE_CLAUSE, GROUP_ID) values 
+('723e689b-2da0-4448-9d48-785fa2f81007', current_timestamp, 'admin', 'tmbkt$TrawlApplication', ', ts$CardAcl acl', '{E}.id = acl.card.id and (acl.user.id = :session$userId or acl.global = true)', '9e44a053-a31f-4edd-b19b-39e942161dd2')^
+insert into SEC_CONSTRAINT (ID, CREATE_TS, CREATED_BY, ENTITY_NAME, JOIN_CLAUSE, WHERE_CLAUSE, GROUP_ID) values 
+('4f98fd86-7a1f-46f9-aacf-9980412435eb', current_timestamp, 'admin', 'tmbkt$TrawlApplication', 'join {E}.aclList acl', '({E}.docOfficeData.officeFile.state >= 30 and {E}.template = false or (acl.user.id = :session$userId or acl.global = true))', 'cff945e4-e363-0dc0-d70d-4b5bdb2a2269')^
+
+-- end addSecGroupConstraintsForTrawlApplication
+
 insert into SEC_PERMISSION (ID, CREATE_TS, CREATED_BY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) values (newid(),now(),'system',1,now(),null,null,null,20,'tmbkt$TrawlApplication:create',0,(select ID from SEC_ROLE where NAME = 'SimpleUser'));
 insert into SEC_PERMISSION (ID, CREATE_TS, CREATED_BY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) values (newid(),now(),'system',1,now(),null,null,null,20,'tmbkt$TrawlApplication:update',0,(select ID from SEC_ROLE where NAME = 'SimpleUser'));
 insert into SEC_PERMISSION (ID, CREATE_TS, CREATED_BY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE, ROLE_ID) values (newid(),now(),'system',1,now(),null,null,null,20,'tmbkt$TrawlApplication:delete',0,(select ID from SEC_ROLE where NAME = 'SimpleUser'));

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.reports:reports-web:5.9.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.reports/reports-web/5.9.10/b2dff3ead9537c8b275aa23142ccd5d394cd7418/reports-web-5.9.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.reports/reports-web/5.9.10/c1d4db45f25f966b3518f88cf90d7dc4055f6181/reports-web-5.9.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

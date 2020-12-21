@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="com.company.tmbkt.tmbkt-core.main" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-core.test" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-global.main" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-global.test" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-gui.main" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-gui.test" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-mobile-rest.main" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-mobile-rest.test" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-portal.main" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-portal.test" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-web.main" target="1.7" />
+      <module name="com.company.tmbkt.tmbkt-web.test" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

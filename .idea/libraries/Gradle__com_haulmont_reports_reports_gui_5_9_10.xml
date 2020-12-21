@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.reports:reports-gui:5.9.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.reports/reports-gui/5.9.10/cb80b4b01f90ebf498aadc688efe82afa38b4b8f/reports-gui-5.9.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.reports/reports-gui/5.9.10/4bf8f6f376e831e2dfcd81f4819603c2289f434a/reports-gui-5.9.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

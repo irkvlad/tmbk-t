@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.thesis.toolkit:thesis-web-deps:4.4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thesis.toolkit/thesis-web-deps/4.4.1/f9af5f0735cd45a55455432d9697a06022e4ecbf/thesis-web-deps-4.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thesis.toolkit/thesis-web-deps/4.4.1/646fd158b0729f4da228a512d47befce806229f6/thesis-web-deps-4.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

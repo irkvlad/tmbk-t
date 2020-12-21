@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.thirdparty:poi:3.9.20130515">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thirdparty/poi/3.9.20130515/730745009f7e782a1aa624f982138ff40ed27479/poi-3.9.20130515.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thirdparty/poi/3.9.20130515/2f86b94e9a7b50a42639e7bf14c62e0babdf338f/poi-3.9.20130515-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

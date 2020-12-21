@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.charts:charts-web:5.9.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.charts/charts-web/5.9.10/b114d03459adf22d3cf2a3f70b635fcf43d5927e/charts-web-5.9.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.charts/charts-web/5.9.10/28cf46d051dbfda94ff26cd4d77934f000230d58/charts-web-5.9.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

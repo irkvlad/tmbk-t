@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.thirdparty:googlemaps:1.0.2.CUBA.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thirdparty/googlemaps/1.0.2.CUBA.7/b25a75e44f13d29c9291eb797c8775d08c2e1f2a/googlemaps-1.0.2.CUBA.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thirdparty/googlemaps/1.0.2.CUBA.7/80cc1b7fed01746f28c9467fe2d6f146031cb77e/googlemaps-1.0.2.CUBA.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

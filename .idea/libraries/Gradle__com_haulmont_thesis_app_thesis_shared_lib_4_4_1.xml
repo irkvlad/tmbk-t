@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.haulmont.thesis.app:thesis-shared-lib:4.4.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thesis.app/thesis-shared-lib/4.4.1/1d97849c383f3b532ba7c8b23ccc89a2036ea060/thesis-shared-lib-4.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.haulmont.thesis.app/thesis-shared-lib/4.4.1/a0a472b432c8739fb5ecf756f09dcec6a8a91d34/thesis-shared-lib-4.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
