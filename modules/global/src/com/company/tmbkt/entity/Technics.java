@@ -15,6 +15,8 @@ import com.haulmont.chile.core.annotations.NamePattern;
 import java.math.BigDecimal;
 import javax.persistence.Column;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToOne;
 
 @NamePattern("%s %s|nomination,code")
 @Table(name = "TMBKT_TECHNICS")
@@ -65,6 +67,18 @@ public class Technics extends StandardEntity {
 
     @Column(name = "DEPTH_REAL", precision = 10, scale = 3)
     protected BigDecimal depthReal;
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "equipmentName")
+    protected TrawlApplication trawlApplicationOtO;
+
+    public void setTrawlApplicationOtO(TrawlApplication trawlApplicationOtO) {
+        this.trawlApplicationOtO = trawlApplicationOtO;
+    }
+
+    public TrawlApplication getTrawlApplicationOtO() {
+        return trawlApplicationOtO;
+    }
+
 
     public void setWeightReal(BigDecimal weightReal) {
         this.weightReal = weightReal;

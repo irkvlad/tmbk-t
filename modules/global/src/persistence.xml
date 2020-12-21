@@ -9,6 +9,7 @@
     <persistence-unit name="tmbk-t"
                       transaction-type="RESOURCE_LOCAL">
         <class>com.company.tmbkt.entity.Technics</class>
+        <class>com.company.tmbkt.entity.TrawlApplication</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
     </persistence-unit>
 </persistence>

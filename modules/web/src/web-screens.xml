@@ -7,4 +7,12 @@
             template="com/company/tmbkt/web/technics/technics-browse.xml"/>
     <screen id="tmbkt$Technics.browse"
             template="com/company/tmbkt/web/technics/technics-browse.xml"/>
+    <screen id="tmbkt$TrawlApplication.templateBrowse"
+            template="com/company/tmbkt/web/trawlapplication/trawlapplication-template-browse.xml"/>
+    <screen id="tmbkt$TrawlApplication.edit"
+            template="com/company/tmbkt/web/trawlapplication/trawlapplication-edit.xml"/>
+    <screen id="tmbkt$TrawlApplication.lookup"
+            template="com/company/tmbkt/web/trawlapplication/trawlapplication-browse.xml"/>
+    <screen id="tmbkt$TrawlApplication.browse"
+            template="com/company/tmbkt/web/trawlapplication/trawlapplication-browse.xml"/>
 </screen-config>

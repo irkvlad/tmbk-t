@@ -4,5 +4,14 @@
         <entity class="com.company.tmbkt.entity.Technics">
             <include re=".*"/>
         </entity>
+        <entity class="com.company.tmbkt.entity.TrawlApplication">
+            <include re=".*"/>
+            <include name="attachments.file"/>
+            <include name="assignments.attachments.file"/>
+            <exclude name="jbpmProcessId"/>
+            <exclude name="parentCard"/>
+            <exclude name="subCards"/>
+            <searchableIf>entity.versionOf == null</searchableIf>
+        </entity>
     </entities>
 </fts-config>

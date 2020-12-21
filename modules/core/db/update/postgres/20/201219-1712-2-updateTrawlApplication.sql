@@ -1,0 +1,13 @@
+alter table TMBKT_TRAWL_APPLICATION add column DESIRED_TRANSPORTATION_COST double precision ;
+alter table TMBKT_TRAWL_APPLICATION add column DESIRED_DELIVERY_TIME date ;
+alter table TMBKT_TRAWL_APPLICATION add column DESIRED_DATE_SHIPMENT date ;
+alter table TMBKT_TRAWL_APPLICATION add column SPECIFY_CHARACTERISTICS boolean ;
+alter table TMBKT_TRAWL_APPLICATION add column OUR_TRAWL boolean ;
+alter table TMBKT_TRAWL_APPLICATION add column TRANSPORTATION_EQUIPMENT boolean ;
+alter table TMBKT_TRAWL_APPLICATION add column THE_NEED_USE_CRANE boolean ;
+alter table TMBKT_TRAWL_APPLICATION add column NUMBER_SEATS integer ;
+alter table TMBKT_TRAWL_APPLICATION add column ADDITIONAL_CARGO varchar(255) ;
+alter table TMBKT_TRAWL_APPLICATION add column ADDITIONAL_WEIGHT double precision ;
+alter table TMBKT_TRAWL_APPLICATION add column ADDITIONAL_LOAD_LENGTH double precision ;
+alter table TMBKT_TRAWL_APPLICATION add column ADDITIONAL_LOAD_WIDTH double precision ;
+alter table TMBKT_TRAWL_APPLICATION add column ADDITIONAL_LOAD_HEIGHT double precision ;
