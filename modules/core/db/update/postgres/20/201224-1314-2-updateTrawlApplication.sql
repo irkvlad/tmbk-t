@@ -1,0 +1,2 @@
+alter table TMBKT_TRAWL_APPLICATION add column THIRD_PARTY_CARRIER_NAME_ID uuid ;
+alter table TMBKT_TRAWL_APPLICATION drop column THIRD_PARTY_CARRIER_NAME cascade ;

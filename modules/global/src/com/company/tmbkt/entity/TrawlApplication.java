@@ -144,6 +144,32 @@ public class TrawlApplication extends Doc implements HasDetailedDescription {
     @Column(name = "ADDITIONAL_LOAD_HEIGHT")
     protected Double additionalLoadHeight;
 
+    @Column(name = "THIRD_PARTY_CARRIER")
+    protected Boolean thirdPartyCarrier;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "THIRD_PARTY_CARRIER_NAME_ID")
+    protected Contractor thirdPartyCarrierName;
+
+    public Contractor getThirdPartyCarrierName() {
+        return thirdPartyCarrierName;
+    }
+
+    public void setThirdPartyCarrierName(Contractor thirdPartyCarrierName) {
+        this.thirdPartyCarrierName = thirdPartyCarrierName;
+    }
+
+
+
+    public void setThirdPartyCarrier(Boolean thirdPartyCarrier) {
+        this.thirdPartyCarrier = thirdPartyCarrier;
+    }
+
+    public Boolean getThirdPartyCarrier() {
+        return thirdPartyCarrier;
+    }
+
+
     public void setAdditionalLoadHeight(Double additionalLoadHeight) {
         this.additionalLoadHeight = additionalLoadHeight;
     }

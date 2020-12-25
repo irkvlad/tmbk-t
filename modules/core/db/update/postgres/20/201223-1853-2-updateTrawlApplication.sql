@@ -1,0 +1,1 @@
+alter table TMBKT_TRAWL_APPLICATION add column THIRD_PARTY_CARRIER_NAME varchar(255) ;

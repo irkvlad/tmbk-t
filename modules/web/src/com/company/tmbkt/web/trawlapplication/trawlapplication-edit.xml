@@ -127,6 +127,13 @@
                 <![CDATA[select e from df$ContactPerson e]]>
             </query>
         </collectionDatasource>
+        <collectionDatasource id="thirdPartyCarrierNamesDs"
+                              class="com.haulmont.thesis.core.entity.Contractor"
+                              view="_minimal">
+            <query>
+                <![CDATA[select e from df$Contractor e]]>
+            </query>
+        </collectionDatasource>
     </dsContext>
     <layout expand="split"
             spacing="true">
@@ -146,370 +153,387 @@
                     <tab id="mainTab"
                          caption="msg://mainTab"
                          margin="true">
-                        <groupBox id="docInfoGroupBox"
-                                  height="100%"
-                                  stylename="edit-area">
-                            <scrollBox id="infoScrollBox"
-                                       height="100%"
-                                       margin="true"
-                                       scrollBars="both">
-                                <vbox id="infoVBox">
-                                    <iframe id="header"
-                                            screen="docHeaderFrame"
-                                            stylename="thesis-star-left-margin"/>
-                                    <vbox id="docInfo">
-                                        <grid id="documentFields"
-                                              margin="true,false,true,false"
-                                              spacing="true"
-                                              width="100%">
-                                            <columns>
-                                                <column flex="1.0"/>
-                                                <column flex="1.0"/>
-                                                <column flex="1.0"/>
-                                                <column flex="1.0"/>
-                                                <column flex="1.0"/>
-                                                <column flex="1.0"/>
-                                                <column flex="1.0"/>
-                                                <column flex="1.0"/>
-                                            </columns>
-                                            <rows>
-                                                <row>
-                                                    <label id="docKindLabel"
-                                                           value="msg://docKind"
-                                                           visible="false"/>
-                                                    <textField id="docKind"
-                                                               datasource="cardDs"
-                                                               editable="false"
-                                                               property="docKind"
-                                                               visible="false"
-                                                               width="200px"/>
-                                                </row>
-                                                <row>
-                                                    <label id="docNumberLabel"
-                                                           value="msg://number"/>
-                                                    <textField id="docNumber"
-                                                               datasource="cardDs"
-                                                               property="number"
-                                                               width="200px"/>
-                                                    <label id="dateLabel"
-                                                           value="msg://date"/>
-                                                    <dateField id="date"
-                                                               datasource="cardDs"
-                                                               property="date"
-                                                               resolution="DAY"
-                                                               width="200px"/>
-                                                    <label id="categoryTALabel"
-                                                           value="Категория"/>
-                                                    <lookupField datasource="cardDs"
-                                                                 property="categiryTrallApplication"/>
-                                                    <label id="dateDispatchFactLabel"
-                                                           value="Дата отправления (факт)"/>
-                                                    <dateField id="dateDispatchFactDateField"
-                                                               datasource="cardDs"
-                                                               property="dateDispatchFact"/>
-                                                </row>
-                                                <row id="themeRow">
-                                                    <label id="themeLabel"
-                                                           value="msg://theme"/>
-                                                    <textField id="theme"
-                                                               colspan="3"
-                                                               datasource="cardDs"
-                                                               property="theme"
-                                                               width="539px"/>
-                                                    <label id="transportationCostLabel"
-                                                           value="Cтоимость транспортировки"/>
-                                                    <textField id="transportationCostField"
-                                                               datasource="cardDs"
-                                                               property="transportationCost"/>
-                                                    <label id="arrivalDateFactLabel"
-                                                           value="Дата прибытия (факт)"/>
-                                                    <dateField id="arrivalDateFactField"
-                                                               datasource="cardDs"
-                                                               property="arrivalDateFact"/>
-                                                </row>
-                                                <row id="organizationRow">
-                                                    <label id="organizationLabel"
-                                                           value="msg://organization"/>
-                                                    <lookupPickerField id="organization"
-                                                                       datasource="cardDs"
-                                                                       optionsDatasource="organizationDs"
-                                                                       property="organization"
-                                                                       width="200px">
-                                                        <actions>
-                                                            <action id="open"/>
-                                                        </actions>
-                                                    </lookupPickerField>
-                                                    <label id="departmentLabel"
-                                                           value="msg://department"/>
-                                                    <lookupPickerField id="department"
-                                                                       datasource="cardDs"
-                                                                       optionsDatasource="departmentDs"
-                                                                       property="department"
-                                                                       width="200px"/>
-                                                </row>
-                                                <row id="contractorRow">
-                                                    <label id="contractorLabel"
-                                                           value="msg://contractor"/>
-                                                    <lookupPickerField id="contractor"
-                                                                       colspan="3"
-                                                                       datasource="cardDs"
-                                                                       optionsDatasource="contractorsDs"
-                                                                       property="contractor"
-                                                                       width="539px">
-                                                        <actions>
-                                                            <action id="lookup"/>
-                                                        </actions>
-                                                    </lookupPickerField>
-                                                </row>
-                                                <row>
-                                                    <label id="parentCardLabel"
-                                                           value="msg://parentCard"/>
-                                                    <pickerField id="parentCard"
-                                                                 datasource="cardDs"
-                                                                 property="parentCard"
-                                                                 width="200px">
-                                                        <actions>
-                                                            <action id="open"/>
-                                                            <action id="clear"/>
-                                                        </actions>
-                                                    </pickerField>
-                                                    <label id="docCategoryLabel"
-                                                           value="msg://docCategory"/>
-                                                    <lookupPickerField id="docCategory"
-                                                                       datasource="cardDs"
-                                                                       optionsDatasource="categoryDs"
-                                                                       property="docCategory"
-                                                                       width="200px">
-                                                        <actions>
-                                                            <action id="open"/>
-                                                        </actions>
-                                                    </lookupPickerField>
-                                                </row>
-                                                <row>
-                                                    <label id="commentLabel"
-                                                           value="msg://comment"
-                                                           width="140px"/>
-                                                    <textArea id="comment"
-                                                              colspan="3"
-                                                              datasource="cardDs"
-                                                              property="comment"
-                                                              resizable="true"
-                                                              width="512px"/>
-                                                </row>
-                                            </rows>
-                                        </grid>
-                                        <hbox>
-                                            <fieldGroup id="dopDoc1fieldGroup"
-                                                        datasource="cardDs"
-                                                        width="100%">
-                                                <column fieldCaptionWidth="140">
-                                                    <field id="customer"
-                                                           optionsDatasource="customersDs"/>
-                                                    <field id="shipper"
-                                                           optionsDatasource="shippersDs"/>
-                                                    <field id="consignee"
-                                                           optionsDatasource="consigneesDs"/>
-                                                </column>
-                                                <column>
-                                                    <field id="passingCargo"/>
-                                                    <field id="pointDeparture"/>
-                                                    <field id="pointDestination"/>
-                                                </column>
-                                                <column>
-                                                    <field id="desiredTransportationCost"/>
-                                                    <field id="contactPersonShipment"
-                                                           optionsDatasource="contactPersonShipmentsDs"/>
-                                                    <field id="contactPersonUnloading"
-                                                           optionsDatasource="contactPersonUnloadingsDs"/>
-                                                </column>
-                                            </fieldGroup>
-                                            <grid id="poneGrid"
-                                                  margin="true"
-                                                  spacing="true">
-                                                <columns count="2"/>
+                        <scrollBox id="infoScrollBox"
+                                   height="100%"
+                                   margin="true"
+                                   scrollBars="both">
+                            <vbox id="infoVBox">
+                                <groupBox id="docInfoGroupBox"
+                                          stylename="edit-area"
+                                          width="AUTO">
+                                    <vbox id="docInfoVbox">
+                                        <iframe id="header"
+                                                screen="docHeaderFrame"
+                                                stylename="thesis-star-left-margin"/>
+                                        <vbox id="docInfo">
+                                            <grid id="documentFields"
+                                                  margin="true,false,false,false"
+                                                  spacing="true"
+                                                  width="100%">
+                                                <columns>
+                                                    <column flex="1.0"/>
+                                                    <column flex="1.0"/>
+                                                    <column flex="1.0"/>
+                                                    <column flex="1.0"/>
+                                                    <column flex="0.0"/>
+                                                    <column flex="0.0"/>
+                                                    <column flex="0.0"/>
+                                                    <column flex="0.0"/>
+                                                </columns>
                                                 <rows>
                                                     <row>
-                                                        <label height="20px"
-                                                               value=" "/>
-                                                        <label/>
+                                                        <label id="docKindLabel"
+                                                               value="msg://docKind"
+                                                               visible="false"/>
+                                                        <textField id="docKind"
+                                                                   datasource="cardDs"
+                                                                   editable="false"
+                                                                   property="docKind"
+                                                                   visible="false"
+                                                                   width="200px"/>
+                                                        <label id="categoryTALabel"
+                                                               value="Категория"/>
+                                                        <lookupField datasource="cardDs"
+                                                                     property="categiryTrallApplication"/>
+                                                        <label id="dateDispatchFactLabel"
+                                                               value="Дата отправления (факт)"/>
+                                                        <dateField id="dateDispatchFactDateField"
+                                                                   datasource="cardDs"
+                                                                   property="dateDispatchFact"/>
+                                                    </row>
+                                                    <row id="numberRow">
+                                                        <label id="docNumberLabel"
+                                                               value="msg://number"/>
+                                                        <textField id="docNumber"
+                                                                   datasource="cardDs"
+                                                                   property="number"
+                                                                   width="200px"/>
+                                                        <label id="dateLabel"
+                                                               value="msg://date"/>
+                                                        <dateField id="date"
+                                                                   datasource="cardDs"
+                                                                   property="date"
+                                                                   resolution="DAY"
+                                                                   width="200px"/>
+                                                        <label id="arrivalDateFactLabel"
+                                                               value="Дата прибытия (факт)"/>
+                                                        <dateField id="arrivalDateFactField"
+                                                                   datasource="cardDs"
+                                                                   property="arrivalDateFact"/>
+                                                    </row>
+                                                    <row id="themeRow">
+                                                        <label id="themeLabel"
+                                                               value="msg://theme"/>
+                                                        <textField id="theme"
+                                                                   colspan="3"
+                                                                   datasource="cardDs"
+                                                                   property="theme"
+                                                                   width="539px"/>
+                                                        <label id="transportationCostLabel"
+                                                               value="Cтоимость транспортировки"/>
+                                                        <textField id="transportationCostField"
+                                                                   datasource="cardDs"
+                                                                   property="transportationCost"/>
+                                                    </row>
+                                                    <row id="organizationRow">
+                                                        <label id="organizationLabel"
+                                                               value="msg://organization"/>
+                                                        <lookupPickerField id="organization"
+                                                                           datasource="cardDs"
+                                                                           optionsDatasource="organizationDs"
+                                                                           property="organization"
+                                                                           width="200px">
+                                                            <actions>
+                                                                <action id="open"/>
+                                                            </actions>
+                                                        </lookupPickerField>
+                                                        <label id="departmentLabel"
+                                                               value="msg://department"/>
+                                                        <lookupPickerField id="department"
+                                                                           datasource="cardDs"
+                                                                           optionsDatasource="departmentDs"
+                                                                           property="department"
+                                                                           width="200px"/>
+                                                    </row>
+                                                    <row id="contractorRow">
+                                                        <label id="contractorLabel"
+                                                               value="msg://contractor"/>
+                                                        <lookupPickerField id="contractor"
+                                                                           colspan="3"
+                                                                           datasource="cardDs"
+                                                                           optionsDatasource="contractorsDs"
+                                                                           property="contractor"
+                                                                           width="539px">
+                                                            <actions>
+                                                                <action id="lookup"/>
+                                                            </actions>
+                                                        </lookupPickerField>
+                                                    </row>
+                                                    <row id="cardRow">
+                                                        <label id="parentCardLabel"
+                                                               value="msg://parentCard"/>
+                                                        <pickerField id="parentCard"
+                                                                     datasource="cardDs"
+                                                                     property="parentCard"
+                                                                     width="200px">
+                                                            <actions>
+                                                                <action id="open"/>
+                                                                <action id="clear"/>
+                                                            </actions>
+                                                        </pickerField>
+                                                        <label id="docCategoryLabel"
+                                                               value="msg://docCategory"/>
+                                                        <lookupPickerField id="docCategory"
+                                                                           datasource="cardDs"
+                                                                           optionsDatasource="categoryDs"
+                                                                           property="docCategory"
+                                                                           width="200px">
+                                                            <actions>
+                                                                <action id="open"/>
+                                                            </actions>
+                                                        </lookupPickerField>
+                                                    </row>
+                                                    <row id="commentRow">
+                                                        <label id="commentLabel"
+                                                               value="msg://comment"
+                                                               width="140px"/>
+                                                        <textArea id="comment"
+                                                                  colspan="3"
+                                                                  datasource="cardDs"
+                                                                  property="comment"
+                                                                  resizable="true"
+                                                                  width="512px"/>
                                                     </row>
                                                     <row>
-                                                        <fieldGroup id="contactPersonShipmentFieldGroup"
-                                                                    datasource="contactPersonShipmentsDs">
-                                                            <field id="phone"/>
-                                                        </fieldGroup>
-                                                        <fieldGroup id="dopDoc2fieldGroup"
-                                                                    datasource="cardDs"
-                                                                    rowspan="2">
-                                                            <column>
-                                                                <field id="desiredDeliveryTime"/>
-                                                                <field id="desiredDateShipment"/>
-                                                            </column>
-                                                        </fieldGroup>
+                                                        <label value="Заказчик"/>
+                                                        <lookupPickerField id="cardFieldCustmer"
+                                                                           datasource="cardDs"
+                                                                           optionsDatasource="contractorsDs"
+                                                                           property="customer">
+                                                            <actions>
+                                                                <action id="lookup"/>
+                                                            </actions>
+                                                        </lookupPickerField>
+                                                        <label value="Попутный груз"/>
+                                                        <checkBox datasource="cardDs"
+                                                                  property="passingCargo"/>
                                                     </row>
                                                     <row>
-                                                        <fieldGroup id="contactPersonUnloadingFieldGroup"
-                                                                    datasource="contactPersonUnloadingsDs">
-                                                            <column>
-                                                                <field id="phone"/>
-                                                            </column>
-                                                        </fieldGroup>
+                                                        <label value="Желаема стоимость перевозки"/>
+                                                        <textField datasource="cardDs"
+                                                                   datatype="double"
+                                                                   property="desiredTransportationCost"/>
                                                     </row>
                                                 </rows>
                                             </grid>
-                                        </hbox>
-                                        <grid margin="true,false,true,false"
-                                              spacing="true">
-                                            <columns count="2"/>
+                                        </vbox>
+                                        <grid id="signatureInfo">
+                                            <columns count="4"/>
                                             <rows>
                                                 <row>
-                                                    <fieldGroup id="tehnicksSelectFieldGroup"
-                                                                datasource="cardDs">
-                                                        <column width="250px">
-                                                            <field id="equipmentName"/>
-                                                        </column>
-                                                    </fieldGroup>
-                                                    <fieldGroup id="specifyCharacteristicsFieldGroup"
-                                                                datasource="cardDs">
-                                                        <column>
-                                                            <field id="specifyCharacteristics"/>
-                                                        </column>
-                                                    </fieldGroup>
+                                                    <label id="signatureLabel"
+                                                           value="msg://docSignatureLab"
+                                                           visible="false"/>
+                                                    <button id="docSignature"
+                                                            stylename="link"
+                                                            visible="false"/>
+                                                </row>
+                                                <row id="globalRow">
+                                                    <label id="globalLab"
+                                                           value="msg://global"
+                                                           visible="false"/>
+                                                    <checkBox id="globalCheckBox"
+                                                              datasource="cardDs"
+                                                              property="global"
+                                                              visible="false"/>
                                                 </row>
                                                 <row>
-                                                    <fieldGroup id="endorsedFieldGroup"
-                                                                datasource="tehiksDs">
-                                                        <column>
-                                                            <field id="serialNumber"/>
-                                                            <field id="comar"/>
-                                                            <field id="model"/>
-                                                            <field id="weight"
-                                                                   width="100px"/>
-                                                            <field id="length"
-                                                                   width="100px"/>
-                                                            <field id="width"
-                                                                   width="100px"/>
-                                                            <field id="depth"
-                                                                   width="100px"/>
-                                                        </column>
-                                                        <column>
-                                                            <field id="secondHand"/>
-                                                            <field id="trawlApplicationOtO"
-                                                                   editable="false"
-                                                                   visible="false"
-                                                                   width="0px"/>
-                                                            <field id="id"
-                                                                   editable="false"
-                                                                   visible="false"
-                                                                   width="0px"/>
-                                                            <field id="weightReal"
-                                                                   width="100px"/>
-                                                            <field id="lengthReal"
-                                                                   width="100px"/>
-                                                            <field id="widthReal"
-                                                                   width="100px"/>
-                                                            <field id="depthReal"
-                                                                   width="100px"/>
-                                                        </column>
-                                                    </fieldGroup>
-                                                    <fieldGroup id="dopDoc3fieldGroup"
-                                                                datasource="cardDs">
-                                                        <column fieldCaptionWidth="140">
-                                                            <field id="additionalCargo"/>
-                                                            <field id="state"
-                                                                   editable="false"
-                                                                   visible="false"
-                                                                   width="0px"/>
-                                                            <field id="description"
-                                                                   editable="false"
-                                                                   visible="false"
-                                                                   width="0px"/>
-                                                            <field id="additionalWeight"
-                                                                   caption="Вес доп. груза"
-                                                                   width="100px"/>
-                                                            <field id="additionalLoadLength"
-                                                                   caption="Длина доп. груза"
-                                                                   width="100px"/>
-                                                            <field id="additionalLoadWidth"
-                                                                   caption="Ширина доп. груза"
-                                                                   width="100px"/>
-                                                            <field id="additionalLoadHeight"
-                                                                   caption="Высота доп. груза"
-                                                                   width="100px"/>
-                                                        </column>
-                                                        <column>
-                                                            <field id="ourTrawl"/>
-                                                            <field id="transportationEquipment"/>
-                                                            <field id="theNeedUseCrane"/>
-                                                            <field id="numberSeats"
-                                                                   width="50px"/>
-                                                        </column>
-                                                    </fieldGroup>
+                                                    <label id="parentCardAccessLabel"
+                                                           value="msg://parentCardAccess"/>
+                                                    <checkBox id="parentCardAccess"
+                                                              datasource="cardDs"
+                                                              property="parentCardAccess"/>
                                                 </row>
                                             </rows>
                                         </grid>
                                     </vbox>
-                                    <grid id="signatureInfo">
+                                </groupBox>
+                                <hbox margin="true"
+                                      spacing="true">
+                                    <groupBox id="groupBox_shipper"
+                                              caption="Грузоотправитель"
+                                              spacing="true">
+                                        <fieldGroup datasource="cardDs">
+                                            <column>
+                                                <field id="shipper"
+                                                       width="250px"/>
+                                                <field id="pointDeparture"
+                                                       width="250px"/>
+                                                <field id="contactPersonShipment"
+                                                       optionsDatasource="contactPersonShipmentsDs"/>
+                                                <field id="phone"
+                                                       datasource="contactPersonShipmentsDs"/>
+                                                <field id="desiredDateShipment"/>
+                                            </column>
+                                        </fieldGroup>
+                                    </groupBox>
+                                    <groupBox id="groupBox_consignee"
+                                              caption="Грузополучатель"
+                                              spacing="true">
+                                        <fieldGroup datasource="cardDs">
+                                            <column>
+                                                <field id="consignee"/>
+                                                <field id="pointDestination"
+                                                       width="250px"/>
+                                                <field id="contactPersonUnloading"
+                                                       optionsDatasource="contactPersonUnloadingsDs"/>
+                                                <field id="phone"
+                                                       datasource="contactPersonUnloadingsDs"/>
+                                                <field id="desiredDeliveryTime"/>
+                                            </column>
+                                        </fieldGroup>
+                                    </groupBox>
+                                </hbox>
+                                <groupBox id="groupBox_tehnics"
+                                          caption="Техника"
+                                          width="AUTO">
+                                    <grid margin="false,false,true,false"
+                                          spacing="true">
+                                        <columns count="12"/>
+                                        <rows>
+                                            <row>
+                                                <fieldGroup colspan="2"
+                                                            datasource="cardDs">
+                                                    <column>
+                                                        <field id="equipmentName"/>
+                                                    </column>
+                                                </fieldGroup>
+                                                <label value="Б/У"/>
+                                                <checkBox/>
+                                                <label value="Наш транспорт"/>
+                                                <checkBox id="checkBoxOur"
+                                                          datasource="cardDs"
+                                                          property="ourTrawl"/>
+                                                <label value="Сторонний транспорт"/>
+                                                <checkBox id="cardCheckBoxThird"
+                                                          datasource="cardDs"
+                                                          property="thirdPartyCarrier"/>
+                                                <label value="Сторонний перевозчик"/>
+                                                <lookupPickerField datasource="cardDs"
+                                                                   optionsDatasource="contractorsDs"
+                                                                   property="thirdPartyCarrierName">
+                                                    <actions>
+                                                        <action id="lookup"/>
+                                                    </actions>
+                                                </lookupPickerField>
+                                            </row>
+                                        </rows>
+                                    </grid>
+                                    <hbox margin="false,false,true,false"
+                                          spacing="true">
+                                        <fieldGroup datasource="tehiksDs">
+                                            <column fieldCaptionWidth="143">
+                                                <field id="serialNumber"
+                                                       width="150px"/>
+                                                <field id="comar"
+                                                       width="150px"/>
+                                                <field id="model"/>
+                                            </column>
+                                        </fieldGroup>
+                                        <fieldGroup datasource="cardDs">
+                                            <column fieldCaptionWidth="160"
+                                                    width="50px">
+                                                <field id="theNeedUseCrane"
+                                                       caption="Необходимость в кране"/>
+                                                <field id="numberSeats"/>
+                                            </column>
+                                            <column fieldCaptionWidth="155">
+                                                <field id="passingCargo"
+                                                       editable="false"
+                                                       visible="false"
+                                                       width="0px"/>
+                                                <field id="transportationEquipment"
+                                                       width="20px"/>
+                                            </column>
+                                        </fieldGroup>
+                                    </hbox>
+                                    <grid id="tehnicksGrid"
+                                          margin="false,false,true,false"
+                                          spacing="true">
                                         <columns count="4"/>
                                         <rows>
                                             <row>
-                                                <label id="signatureLabel"
-                                                       value="msg://docSignatureLab"
-                                                       visible="false"/>
-                                                <button id="docSignature"
-                                                        stylename="link"
-                                                        visible="false"/>
-                                            </row>
-                                            <row id="globalRow">
-                                                <label id="globalLab"
-                                                       value="msg://global"
-                                                       visible="false"/>
-                                                <checkBox id="globalCheckBox"
-                                                          datasource="cardDs"
-                                                          property="global"
-                                                          visible="false"/>
-                                            </row>
-                                            <row>
-                                                <label id="parentCardAccessLabel"
-                                                       value="msg://parentCardAccess"/>
-                                                <checkBox id="parentCardAccess"
-                                                          datasource="cardDs"
-                                                          property="parentCardAccess"/>
-                                            </row>
-                                        </rows>
-                                    </grid>
-                                    <vbox margin="false,false,true,false"
-                                          spacing="true"
-                                          width="AUTO">
-                                        <scrollBox height="100px"
-                                                   margin="true,false,true,false"
-                                                   scrollBars="both">
-                                            <runtimeProperties id="runtimePropertiesFrameMain"
-                                                               categoriesDs="categoriesDs"
-                                                               fieldWidth="200px"
-                                                               rows="${thesis_countOfColumnsForAdditionalFields}"
-                                                               runtimeDs="runtimePropsDs"/>
-                                        </scrollBox>
-                                    </vbox>
-                                    <grid id="attachmentInfo"
-                                          margin="true,false,false,false"
-                                          spacing="true"
-                                          stylename="thesis-separator"
-                                          visible="false"
-                                          width="550px">
-                                        <columns>
-                                            <column flex="1.0"/>
-                                        </columns>
-                                        <rows>
-                                            <row>
-                                                <vbox id="attachmentBox"
-                                                      height="100%"/>
+                                                <fieldGroup id="endorsedFieldGroup"
+                                                            datasource="tehiksDs">
+                                                    <column fieldCaptionWidth="143"
+                                                            width="100px">
+                                                        <field id="weight"/>
+                                                        <field id="length"/>
+                                                        <field id="width"/>
+                                                        <field id="depth"/>
+                                                    </column>
+                                                    <column width="100px">
+                                                        <field id="weightReal"/>
+                                                        <field id="lengthReal"/>
+                                                        <field id="widthReal"/>
+                                                        <field id="depthReal"/>
+                                                    </column>
+                                                </fieldGroup>
+                                                <label width="8px"/>
+                                                <fieldGroup id="dopDoc3fieldGroup"
+                                                            border="visible"
+                                                            colspan="2"
+                                                            datasource="cardDs">
+                                                    <column fieldCaptionWidth="161"
+                                                            width="100px">
+                                                        <field id="additionalCargo"
+                                                               width="250px"/>
+                                                        <field id="additionalWeight"
+                                                               caption="Вес доп. груза"/>
+                                                        <field id="additionalLoadLength"
+                                                               caption="Длина доп. груза"/>
+                                                        <field id="additionalLoadWidth"
+                                                               caption="Ширина доп. груза"/>
+                                                        <field id="additionalLoadHeight"
+                                                               caption="Высота доп. груза"/>
+                                                    </column>
+                                                </fieldGroup>
                                             </row>
                                         </rows>
                                     </grid>
+                                </groupBox>
+                                <vbox id="runtimePropertiesVbox"
+                                      margin="false,false,true,false"
+                                      spacing="true"
+                                      width="AUTO">
+                                    <scrollBox height="100px"
+                                               margin="true,false,true,false"
+                                               scrollBars="both">
+                                        <runtimeProperties id="runtimePropertiesFrameMain"
+                                                           categoriesDs="categoriesDs"
+                                                           fieldWidth="200px"
+                                                           rows="${thesis_countOfColumnsForAdditionalFields}"
+                                                           runtimeDs="runtimePropsDs"/>
+                                    </scrollBox>
                                 </vbox>
-                            </scrollBox>
-                        </groupBox>
+                                <grid id="attachmentInfo"
+                                      margin="true,false,false,false"
+                                      spacing="true"
+                                      stylename="thesis-separator"
+                                      visible="false"
+                                      width="550px">
+                                    <columns>
+                                        <column flex="1.0"/>
+                                    </columns>
+                                    <rows>
+                                        <row>
+                                            <vbox id="attachmentBox"
+                                                  height="100%"/>
+                                        </row>
+                                    </rows>
+                                </grid>
+                            </vbox>
+                        </scrollBox>
                     </tab>
                     <tab id="cardProjectsTab"
                          caption="msg://cardProjectsTab">

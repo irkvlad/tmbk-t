@@ -9,6 +9,13 @@
                 <![CDATA[select distinct d from tmbkt$TrawlApplication d where d.template = true and d.versionOf is null order by d.templateName]]>
             </query>
         </groupDatasource>
+        <collectionDatasource id="thirdPartyCarrierNamesDs"
+                              class="com.haulmont.thesis.core.entity.Contractor"
+                              view="_minimal">
+            <query>
+                <![CDATA[select e from df$Contractor e]]>
+            </query>
+        </collectionDatasource>
     </dsContext>
     <layout expand="split"
             spacing="true">
