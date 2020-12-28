@@ -408,18 +408,25 @@
                                                         <field id="equipmentName"/>
                                                     </column>
                                                 </fieldGroup>
-                                                <label value="Б/У"/>
+                                                <label align="TOP_RIGHT"
+                                                       value="Б/У"/>
                                                 <checkBox/>
-                                                <label value="Наш транспорт"/>
+                                                <label value=" "
+                                                       width="10px"/>
+                                                <label align="TOP_RIGHT"
+                                                       value="Наш транспорт"/>
                                                 <checkBox id="checkBoxOur"
                                                           datasource="cardDs"
                                                           property="ourTrawl"/>
-                                                <label value="Сторонний транспорт"/>
+                                                <label value="Сторонний перевозчик"
+                                                       visible="false"/>
+                                                <label align="TOP_RIGHT"
+                                                       value="Сторонний транспорт"/>
                                                 <checkBox id="cardCheckBoxThird"
                                                           datasource="cardDs"
                                                           property="thirdPartyCarrier"/>
-                                                <label value="Сторонний перевозчик"/>
-                                                <lookupPickerField datasource="cardDs"
+                                                <lookupPickerField id="cardFieldThird"
+                                                                   datasource="cardDs"
                                                                    optionsDatasource="contractorsDs"
                                                                    property="thirdPartyCarrierName">
                                                     <actions>

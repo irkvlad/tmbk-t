@@ -1,6 +1,7 @@
 package com.company.tmbkt.web.trawlapplication;
 
 import com.haulmont.cuba.gui.components.CheckBox;
+import com.haulmont.cuba.gui.components.LookupPickerField;
 import com.haulmont.cuba.gui.data.ValueListener;
 import com.haulmont.thesis.web.actions.PrintReportAction;
 import com.haulmont.thesis.web.ui.basicdoc.editor.AbstractDocEditor;
@@ -20,6 +21,11 @@ public class TrawlApplicationEdit extends AbstractDocEditor<TrawlApplication> {
     @Inject
     private CheckBox cardCheckBoxThird;
 
+    @Inject
+    private LookupPickerField cardFieldThird;
+    
+    
+
     @Override
     public void init(Map<String, Object> params) {
         super.init(params);
@@ -30,6 +36,8 @@ public class TrawlApplicationEdit extends AbstractDocEditor<TrawlApplication> {
                 if (Boolean.TRUE.equals(value)) {
                     cardCheckBoxThird.setValue(null);
                     cardCheckBoxThird.setEditable(true);
+                    cardFieldThird.setValue(null);
+                    cardFieldThird.setEditable(false);
                     checkBoxOur.setEditable(false);
                     //showNotification("Наша техника", NotificationType.HUMANIZED);
                 }
@@ -43,7 +51,8 @@ public class TrawlApplicationEdit extends AbstractDocEditor<TrawlApplication> {
                     checkBoxOur.setValue(null);
                     checkBoxOur.setEditable(true);
                     cardCheckBoxThird.setEditable(false);
-                    //showNotification("Стооняя техника", NotificationType.HUMANIZED);
+                    cardFieldThird.setEditable(true);
+                    //showNotification("Стороняя техника", NotificationType.HUMANIZED);
                 }
             }
         });
