@@ -453,6 +453,8 @@
                                                 <field id="theNeedUseCrane"
                                                        caption="Необходимость в кране"/>
                                                 <field id="numberSeats"/>
+                                                <field id="specifyCharacteristics"
+                                                       caption="Уточнить габариты"/>
                                             </column>
                                             <column fieldCaptionWidth="155">
                                                 <field id="passingCargo"

@@ -151,6 +151,18 @@ public class TrawlApplication extends Doc implements HasDetailedDescription {
     @JoinColumn(name = "THIRD_PARTY_CARRIER_NAME_ID")
     protected Contractor thirdPartyCarrierName;
 
+    @Column(name = "SPECIFY_DIMENSIONS")
+    protected Boolean specify_dimensions;
+
+    public void setSpecify_dimensions(Boolean specify_dimensions) {
+        this.specify_dimensions = specify_dimensions;
+    }
+
+    public Boolean getSpecify_dimensions() {
+        return specify_dimensions;
+    }
+
+
     public Contractor getThirdPartyCarrierName() {
         return thirdPartyCarrierName;
     }

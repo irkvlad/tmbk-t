@@ -59,6 +59,7 @@ create table TMBKT_TRAWL_APPLICATION (
     ADDITIONAL_LOAD_HEIGHT double precision,
     THIRD_PARTY_CARRIER boolean,
     THIRD_PARTY_CARRIER_NAME_ID uuid,
+    SPECIFY_DIMENSIONS boolean,
     --
     primary key (CARD_ID)
 )^^-- end TMBKT_TRAWL_APPLICATION
