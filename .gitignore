@@ -7,3 +7,4 @@ deploy/*
 modules/*/build/*
 out
 test-run
+!deploy/tomcat/webapps/app-core/WEB-INF/db
