@@ -60,6 +60,9 @@ create table TMBKT_TRAWL_APPLICATION (
     THIRD_PARTY_CARRIER boolean,
     THIRD_PARTY_CARRIER_NAME_ID uuid,
     SPECIFY_DIMENSIONS boolean,
+    TRAILER_TYPE varchar(50),
+    LOADER_L varchar(50),
+    LOADER_U varchar(50),
     --
     primary key (CARD_ID)
 )^^-- end TMBKT_TRAWL_APPLICATION

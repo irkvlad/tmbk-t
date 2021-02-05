@@ -154,6 +154,41 @@ public class TrawlApplication extends Doc implements HasDetailedDescription {
     @Column(name = "SPECIFY_DIMENSIONS")
     protected Boolean specify_dimensions;
 
+    @Column(name = "TRAILER_TYPE")
+    protected String trailerType;
+
+    @Column(name = "LOADER_L")
+    protected String loaderL;
+
+    @Column(name = "LOADER_U")
+    protected String loaderU;
+
+    public void setLoaderL(Loader loaderL) {
+        this.loaderL = loaderL == null ? null : loaderL.getId();
+    }
+
+    public Loader getLoaderL() {
+        return loaderL == null ? null : Loader.fromId(loaderL);
+    }
+
+    public void setLoaderU(Loader loaderU) {
+        this.loaderU = loaderU == null ? null : loaderU.getId();
+    }
+
+    public Loader getLoaderU() {
+        return loaderU == null ? null : Loader.fromId(loaderU);
+    }
+
+
+    public void setTrailerType(TrailerType trailerType) {
+        this.trailerType = trailerType == null ? null : trailerType.getId();
+    }
+
+    public TrailerType getTrailerType() {
+        return trailerType == null ? null : TrailerType.fromId(trailerType);
+    }
+
+
     public void setSpecify_dimensions(Boolean specify_dimensions) {
         this.specify_dimensions = specify_dimensions;
     }
