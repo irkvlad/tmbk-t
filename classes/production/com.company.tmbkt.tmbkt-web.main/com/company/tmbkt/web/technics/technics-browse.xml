@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.tmbkt.web.technics.TechnicsBrowse"
+        lookupComponent="technicsTable"
+        messagesPack="com.company.tmbkt.web.technics">
+    <dsContext>
+        <collectionDatasource id="technicsDs"
+                              class="com.company.tmbkt.entity.Technics"
+                              view="technics-browse">
+            <query>
+                <![CDATA[select e from tmbkt$Technics e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="technicsTable"
+            spacing="true">
+        <filter id="genericFilter"
+                applyTo="technicsTable"
+                datasource="technicsDs"
+                stylename="edit-area">
+            <properties include=".*"/>
+        </filter>
+        <table id="technicsTable"
+               multiselect="true"
+               presentations="true"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="code"/>
+                <column id="serialNumber"/>
+                <column id="depth"/>
+                <column id="comar"/>
+                <column id="width"/>
+                <column id="length"/>
+                <column id="weight"/>
+                <column id="model"/>
+                <column id="secondHand"/>
+                <column id="nomination"/>
+                <column id="weightReal"/>
+                <column id="widthReal"/>
+                <column id="lengthReal"/>
+                <column id="depthReal"/>
+            </columns>
+            <rows datasource="technicsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="technicsTable.create"/>
+                <button id="editBtn"
+                        action="technicsTable.edit"/>
+                <button id="removeBtn"
+                        action="technicsTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>
